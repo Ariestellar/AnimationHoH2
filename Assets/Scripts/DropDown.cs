@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class DropDown : MonoBehaviour
 {
     [SerializeField] private CharacterAnimation _characterAnimation;
-    private Dropdown _listAnimations;
-    private int _idAnimation;
+
+    private Dropdown _listAnimations;    
     List<string> _list = new List<string> { 
     "Lift",
     "PushLever",
@@ -19,8 +19,7 @@ public class DropDown : MonoBehaviour
     "FallDeath",
     "FallFireDeath",
     "Run",
-    "RunningHold",
-    "UseItem",
+    "RunningHold",    
     "Dancing",
     "OpenChest",
     "Level_1Fire",
@@ -28,16 +27,14 @@ public class DropDown : MonoBehaviour
     "Level_1TakeMatch_Anim",
     "Level_1TakeScrowbar_Anim",
     "Level_2_Sword_Anim",
-    "Level_2_Mirror_Anim",
-    "Level_2_Death_Anim",
+    "Level_2_Mirror_Anim",    
     "Level3_TakeKey",
     "Level3TakeDinamite",
     "Level3HeroOpenChest",
     "Level_4_Sparow_Anim",
     "Level_4_Cat_Anim",
     "Level_5_Burger_Anim",
-    "Level_5_Wearing_Anim",
-    "Level_5_Drakula_Anim",
+    "Level_5_Wearing_Anim",    
     "Level6Hoover",
     "Level6TakePick",
     "Level_7_Flash_Anim",
@@ -57,6 +54,6 @@ public class DropDown : MonoBehaviour
 
     public void ChangedLevel()
     {        
-        _characterAnimation.SetAnimation(_list[_listAnimations.value]);
+        _characterAnimation.SetAnimation(_list[_listAnimations.value], _listAnimations.value);
     }
 }

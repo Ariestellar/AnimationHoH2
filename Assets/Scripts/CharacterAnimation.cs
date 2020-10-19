@@ -12,13 +12,17 @@ public class CharacterAnimation : MonoBehaviour
         _animatior = GetComponent<Animator>();
     }
 
-    public void SetAnimation(String trigger)
+    public void SetAnimation(String trigger, int id)
     {
-        Debug.Log(trigger);
+        if (id >= 11)
+        {
+            _animatior.SetTrigger("RunningHold");
+        }
         _animatior.SetTrigger(trigger);
     }
 }
 
+/*
 enum AnimationMove
 {
     Lift,
@@ -29,25 +33,23 @@ enum AnimationMove
     FallDeath,
     FallFireDeath,
     Run,
-    RunningHold,
-    UseItem,
+    RunningHold,    
     Dancing,
     OpenChest,
+
     Level_1Fire,
     Level_1Death,
     Level_1TakeMatch_Anim,
     Level_1TakeScrowbar_Anim,
     Level_2_Sword_Anim,
-    Level_2_Mirror_Anim,
-    Level_2_Death_Anim,
+    Level_2_Mirror_Anim,    
     Level3_TakeKey,
     Level3TakeDinamite,
     Level3HeroOpenChest,
     Level_4_Sparow_Anim,
     Level_4_Cat_Anim,
     Level_5_Burger_Anim,
-    Level_5_Wearing_Anim,
-    Level_5_Drakula_Anim,
+    Level_5_Wearing_Anim,    
     Level6Hoover,
     Level6TakePick,
     Level_7_Flash_Anim,
@@ -58,3 +60,4 @@ enum AnimationMove
     Level_10_Pipe_Anim,
     Level_10_Box_Anim 
 }
+*/
